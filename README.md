@@ -10,7 +10,8 @@ An AI-powered front-of-house assistant that handles reservations, menu questions
 - Natural upselling (sharing platters for groups, weekend specials)
 - Escalates complaints to human manager
 - Works 24/7 on WhatsApp, Telegram, SMS
-
+## Live Demo
+[Watch the agent in action on Telegram]https://streamable.com/1la8xd
 ## Demo Conversation
 
 > **Customer:** Hi, I'd like to book a table for 4 this Saturday at 7pm
