@@ -4,14 +4,13 @@ An AI-powered front-of-house assistant that handles reservations, menu questions
 
 ## What It Does
 
-- Takes reservation requests (date, time, party size, name, phone)
+- Takes reservation requests and books them on Google Calendar automatically
 - Answers menu and dietary questions (halal, vegan, gluten-free)
 - Handles hours, location, delivery info
 - Natural upselling (sharing platters for groups, weekend specials)
 - Escalates complaints to human manager
 - Works 24/7 on WhatsApp, Telegram, SMS
-## Live Demo
-[Watch the agent in action on Telegram]https://streamable.com/1la8xd
+
 ## Demo Conversation
 
 > **Customer:** Hi, I'd like to book a table for 4 this Saturday at 7pm
@@ -20,30 +19,26 @@ An AI-powered front-of-house assistant that handles reservations, menu questions
 > 1. What name should the booking be under?
 > 2. And a phone number we can reach you on?
 >
-> Also, Saturday evenings are a great time to visit — we have some lovely weekend specials on. And for a group of 4, our sharing platters are always a big hit if you're interested!
->
-> Looking forward to welcoming you.
+> Saturday evenings are a great time — we have lovely weekend specials on. And for a group of 4, our sharing platters are always a big hit!
+
+## Google Calendar Integration
+
+When a booking is confirmed, the agent creates a real calendar event automatically — no manual entry needed.
 
 ## Setup
 
-```bash
-# Install Hermes Agent
-curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
-
-# Copy skill
-cp -r . ~/.hermes/skills/restaurant-agent/
-
-# Start chatting
-hermes chat
-```
+1. Install [Hermes Agent](https://github.com/NousResearch/hermes-agent)
+2. Copy `SKILL.md` to `~/.hermes/skills/restaurant-agent/`
+3. Set up Google Calendar credentials (see `calendar_tool.py`)
+4. Run `hermes chat` and start taking bookings
 
 ## Customization
 
-Edit the `Restaurant Details` section in SKILL.md to match your client's restaurant — name, hours, menu, location, dietary options. Deploy in under 30 minutes.
+Edit the Restaurant Details section in SKILL.md to match your client's restaurant — name, hours, menu, location, dietary options. Deploy in under 30 minutes.
 
 ## Built With
 
 - [Hermes Agent](https://github.com/NousResearch/hermes-agent) by Nous Research
-- Claude Sonnet 4.6 (Anthropic)
+- Claude Sonnet 4 (Anthropic)
+- Google Calendar API
 - MIT License
-
